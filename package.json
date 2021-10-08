@@ -1,0 +1,12 @@
+{
+  "name": "prepend",
+  "version": "1.0.0",
+  "description": "CLI tool for prepending string data to files",
+  "main": "index.js",
+  "type": "module",
+  "author": "Nikolay Rademacher <hrrdx33@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "meow": "^10.1.1"
+  }
+}
