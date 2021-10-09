@@ -1,6 +1,6 @@
 {
   "name": "@nrademacher/prepend-cli",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "CLI tool for prepending string data to files",
   "author": "Nikolay Rademacher <hrrdx33@gmail.com>",
   "type": "module",
