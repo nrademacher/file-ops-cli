@@ -1,14 +1,25 @@
 {
   "name": "@nrademacher/prepend-cli",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "CLI tool for prepending string data to files",
   "author": "Nikolay Rademacher <hrrdx33@gmail.com>",
   "type": "module",
   "license": "MIT",
-  "bin": {
-    "prepend": "prepend.js"
+  "keywords": [
+    "cli",
+    "prepend",
+    "text",
+    "file"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nrademacher/prepend-cli.git"
   },
   "files": [
-    "prepend.js"
-  ]
+    "prepend.js",
+    "README.md"
+  ],
+  "bin": {
+    "prepend": "prepend.js"
+  }
 }
