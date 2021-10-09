@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import meow from 'meow';
-import { prepend } from './prepend';
+import prepend from './prepend';
 
 const cli = meow(
   `

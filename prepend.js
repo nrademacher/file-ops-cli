@@ -1,6 +1,9 @@
+#!/usr/bin/env node
 import { close, openSync, readFileSync, writeSync } from 'fs';
 
-export function prepend(text, file) {
+function prepend() {
+  const text = process.argv[2];
+  const file = process.argv[3];
   const data = readFileSync(file);
   const fd = openSync(file, 'w+');
   const buffer = Buffer.from(text);
@@ -11,3 +14,5 @@ export function prepend(text, file) {
 
   return 0;
 }
+
+prepend();
