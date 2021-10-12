@@ -4,11 +4,13 @@ import { readFileSync, openSync, writeSync, close } from 'fs';
 import replace from 'replace';
 import pc from 'picocolors';
 
+const fileOps = glob;
+
 const [, , operation, ...args] = process.argv;
 
 const target = args[args.length - 1];
 
-const fileOps = glob(target, function (err, files) {
+fileOps(target, function (err, files) {
   if (err) {
     throw err;
   }
@@ -61,5 +63,3 @@ const fileOps = glob(target, function (err, files) {
     }
   });
 });
-
-fileOps();
