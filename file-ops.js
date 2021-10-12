@@ -15,7 +15,7 @@ fileOps(target, function (err, files) {
     throw err;
   }
 
-  return files.forEach(function (file, index, _array) {
+  return files.forEach(function (file, index, array) {
     switch (operation) {
       case 'fnr':
         const [regex, replacement] = args;
@@ -30,7 +30,7 @@ fileOps(target, function (err, files) {
           silent: true,
         });
 
-        if (!file[index + 1]) {
+        if (!array[index + 1]) {
           console.log(
             `${pc.green('Done.')} ${pc.bold(index + 1)} replacement${
               index + 1 >= 2 ? 's' : ''
@@ -51,7 +51,7 @@ fileOps(target, function (err, files) {
 
         close(fd);
 
-        if (!file[index + 1]) {
+        if (!array[index + 1]) {
           console.log(
             `${pc.green('Done.')} Prepended to ${pc.bold(index + 1)} file${
               index + 1 >= 2 ? 's' : ''
