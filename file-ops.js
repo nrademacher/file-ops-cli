@@ -20,8 +20,7 @@ fileOps(target, function (err, files) {
       case 'fnr':
         const [regex, replacement] = args;
 
-        console.log(file + ' found');
-        console.log(readFileSync(file, 'utf8'));
+        console.log(pc.bold(file) + ' found');
 
         replace({
           regex,
