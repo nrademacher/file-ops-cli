@@ -26,18 +26,19 @@ npm install -g @nrademacher/file-ops-cli
 file-ops op=<op> <args> <file>
 ```
 
+**Note:** Globbed file specifications (e.g. `*.js` or `src/**/*.js`) must be in quotes to prevent automatic glob expansion.
+
 ### Find and replace
 
 ```bash
-file-ops op=fnr '<old>' '<new>' '<file>'
+file-ops fnr '<old>' '<new>' '<file>'
 ```
 
-**Note:** File name must be in quotes to prevent automatic glob expansion.
 
 ### Prepend
 
-```bash
-file-ops op=prepend <text> <file>
+```bas
+file-ops prepend '<text>' '<file>'
 ```
 
 ## TODO
