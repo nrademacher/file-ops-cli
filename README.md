@@ -1,6 +1,11 @@
-# Prepend CLI
+# File Ops CLI
 
-A very simple Node.js CLI app to prepend something to a file.
+A basic Node.js CLI app for common file operations.
+
+Included so far:
+
+- Find and replace
+- Prepending
 
 ## Installation
 
@@ -18,6 +23,26 @@ npm install -g @nrademacher/prepend-cli
 ## Usage
 
 ```bash
-prepend <text> <file>
+file-ops op=<op> <args> <file>
 ```
+
+### Find and replace
+
+```bash
+file-ops op=fnr <old> <new> <file>
+```
+
+### Prepend
+
+```bash
+file-ops op=prepend <text> <file>
+```
+
+## TODO
+
+- [ ] Add better and prettier logging
+- [ ] Add quality-of-life CLI features
+  - [ ] `--help` flag
+- [ ] Add more operations
+- [ ] Write tests
 
