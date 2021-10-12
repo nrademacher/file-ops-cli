@@ -12,12 +12,12 @@ Included so far:
 ### Project-specific usage
 
 ```bash
-npm install @nrademacher/prepend-cli
+npm install @nrademacher/file-ops-cli
 ```
 ### Global usage
 
 ```bash
-npm install -g @nrademacher/prepend-cli
+npm install -g @nrademacher/file-ops-cli
 ```
 
 ## Usage
