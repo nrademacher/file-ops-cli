@@ -30,11 +30,13 @@ fileOps(target, function (err, files) {
           silent: true,
         });
 
-        console.log(
-          `${pc.green('Done.')} ${pc.bold(index + 1)} replacement${
-            index + 1 >= 2 ? 's' : ''
-          } performed`
-        );
+        if (!file[index + 1]) {
+          console.log(
+            `${pc.green('Done.')} ${pc.bold(index + 1)} replacement${
+              index + 1 >= 2 ? 's' : ''
+            } performed`
+          );
+        }
 
         return 0;
       case 'prepend': {
@@ -49,11 +51,13 @@ fileOps(target, function (err, files) {
 
         close(fd);
 
-        console.log(
-          `${pc.green('Done.')} Prepended to ${pc.bold(index + 1)} file${
-            index + 1 >= 2 ? 's' : ''
-          }`
-        );
+        if (!file[index + 1]) {
+          console.log(
+            `${pc.green('Done.')} Prepended to ${pc.bold(index + 1)} file${
+              index + 1 >= 2 ? 's' : ''
+            }`
+          );
+        }
 
         return 0;
       }
