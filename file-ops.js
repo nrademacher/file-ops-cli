@@ -2,13 +2,13 @@
 import glob from 'glob';
 import { readFileSync, openSync, writeSync, close } from 'fs';
 import replace from 'replace';
-import { green } from 'picocolors';
+import pc from 'picocolors';
 
 const [, , operation, ...args] = process.argv;
 
 const target = args[args.length - 1];
 
-glob(target, function (err, files) {
+const fileOps = glob(target, function (err, files) {
   if (err) {
     throw err;
   }
@@ -30,7 +30,7 @@ glob(target, function (err, files) {
         });
 
         console.log(
-          `${green('Done.')} ${bold(index + 1)} replacement${
+          `${pc.green('Done.')} ${pc.bold(index + 1)} replacement${
             index + 1 >= 2 ? 's' : ''
           } performed`
         );
@@ -49,7 +49,7 @@ glob(target, function (err, files) {
         close(fd);
 
         console.log(
-          `${green('Done.')} Prepended to ${bold(index + 1)} file${
+          `${pc.green('Done.')} Prepended to ${pc.bold(index + 1)} file${
             index + 1 >= 2 ? 's' : ''
           }`
         );
@@ -61,3 +61,5 @@ glob(target, function (err, files) {
     }
   });
 });
+
+fileOps();
