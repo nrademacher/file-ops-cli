@@ -18,9 +18,9 @@ fileOps(target, function (err, files) {
   return files.forEach(function (file, index, array) {
     switch (operation) {
       case 'fnr':
-        const [regex, replacement] = args;
+        console.log(`Replacing in ${pc.bold(file)}...`);
 
-        console.log(pc.bold(file) + ' found');
+        const [regex, replacement] = args;
 
         replace({
           regex,
@@ -40,6 +40,8 @@ fileOps(target, function (err, files) {
 
         return 0;
       case 'prepend': {
+        console.log(`Prepending ${pc.bold(file)}...`);
+
         const [text] = args;
 
         const data = readFileSync(file);
