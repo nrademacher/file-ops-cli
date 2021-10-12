@@ -1,25 +1,33 @@
 {
-  "name": "@nrademacher/prepend-cli",
+  "name": "@nrademacher/file-ops-cli",
   "version": "1.0.10",
-  "description": "CLI tool for prepending string data to files",
-  "author": "Nikolay Rademacher <hrrdx33@gmail.com>",
+  "description": "Basic file operations for node",
+  "author": "Nikolay Rademacher <rademacher.nikolay@gmail.com>",
   "type": "module",
   "license": "MIT",
   "keywords": [
     "cli",
+    "find-and-replace",
     "prepend",
     "text",
     "file"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nrademacher/prepend-cli.git"
+    "url": "git+https://github.com/nrademacher/file-ops-cli.git"
   },
   "files": [
-    "prepend.js",
+    "file-ops.js",
     "README.md"
   ],
   "bin": {
-    "prepend": "prepend.js"
+    "file-ops": "file-ops.js"
+  },
+  "engines": {
+    "node": ">=12"
+  },
+  "dependencies": {
+    "glob": "^7.2.0",
+    "replace": "^1.2.1"
   }
 }
