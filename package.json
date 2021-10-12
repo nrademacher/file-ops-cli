@@ -1,9 +1,10 @@
 {
   "name": "@nrademacher/file-ops-cli",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Basic Node CLI file operations",
   "author": "Nikolay Rademacher <rademacher.nikolay@gmail.com>",
   "type": "module",
+  "main": "file-ops.js",
   "license": "MIT",
   "keywords": [
     "cli",
@@ -20,8 +21,7 @@
     "semver": "semver"
   },
   "files": [
-    "file-ops.js",
-    "README.md"
+    "lib/*"
   ],
   "bin": {
     "file-ops": "file-ops.js"
