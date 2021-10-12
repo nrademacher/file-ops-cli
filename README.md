@@ -29,8 +29,10 @@ file-ops op=<op> <args> <file>
 ### Find and replace
 
 ```bash
-file-ops op=fnr <old> <new> <file>
+file-ops op=fnr '<old>' '<new>' '<file>'
 ```
+
+**Note:** File name must be in quotes to prevent automatic glob expansion.
 
 ### Prepend
 
