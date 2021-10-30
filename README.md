@@ -44,7 +44,7 @@ file-ops prepend '<text>' <flags> '<file>'
 #### Flags
 
 * `--unique`, `-u`
- * Will skip file if file already includes input string
+  * Will skip file if file already includes input string
 
 ### Append
 
@@ -55,7 +55,7 @@ file-ops append '<text>' <flags> '<file>'
 #### Flags
 
 * `--unique`, `-u`
- * Will skip file if file already includes input string
+  * Will skip file if file already includes input string
 
 ## TODO
 
