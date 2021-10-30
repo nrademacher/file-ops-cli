@@ -24,7 +24,7 @@ npm install -g @nrademacher/file-ops-cli
 ## Usage
 
 ```bash
-file-ops op=<op> <args> <file>
+file-ops <operation> <args> <file>
 ```
 
 **Note:** Globbed file specifications (e.g. `*.js` or `src/**/*.js`) must be in quotes to prevent automatic glob expansion.
