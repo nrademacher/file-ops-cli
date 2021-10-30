@@ -4,13 +4,13 @@ import { readFileSync, openSync, writeSync, appendFileSync, close } from 'fs';
 import replace from 'replace';
 import pc from 'picocolors';
 
-const fileOps = glob;
+const processFiles = glob;
 
 const [, , operation, ...args] = process.argv;
 
 const target = args[args.length - 1];
 
-fileOps(target, function (err, files) {
+processFiles(target, function (err, files) {
   if (err) {
     throw err;
   }
@@ -20,9 +20,15 @@ fileOps(target, function (err, files) {
   return files.forEach(function (file, index, array) {
     switch (operation) {
       case 'fnr':
-        console.log(`Replacing in ${pc.bold(file)}...`);
-
         const [regex, replacement] = args;
+
+        const data = readFileSync(file);
+
+        if (!data.toString().includes(regex)) {
+          return 0;
+        }
+
+        console.log(`Replacing in ${pc.bold(file)}...`);
 
         replace({
           regex,
