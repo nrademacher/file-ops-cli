@@ -20,7 +20,7 @@ processFiles(target, function (err, files) {
   return files.forEach(function (file, index, array) {
     switch (operation) {
       case 'fnr':
-        const [regex, replacement] = args;
+        const [regex, replacement, ...flags] = args;
 
         const data = readFileSync(file);
 
@@ -28,7 +28,9 @@ processFiles(target, function (err, files) {
           return 0;
         }
 
-        console.log(`Replacing in ${pc.bold(file)}...`);
+        if (!flags.includes('--silent') && !flags.includes('-s')) {
+          console.log(`Replacing in ${pc.bold(file)}...`);
+        }
 
         replace({
           regex,
@@ -60,7 +62,9 @@ processFiles(target, function (err, files) {
           }
         }
 
-        console.log(`Prepending to ${pc.bold(file)}...`);
+        if (!flags.includes('--silent') && !flags.includes('-s')) {
+          console.log(`Prepending to ${pc.bold(file)}...`);
+        }
 
         const fd = openSync(file, 'w+');
         const buffer = Buffer.from(text);
@@ -93,9 +97,9 @@ processFiles(target, function (err, files) {
           }
         }
 
-        console.log(`Appending to ${pc.bold(file)}...`);
-
-        let appendCount = 0;
+        if (!flags.includes('--silent') && !flags.includes('-s')) {
+          console.log(`Appending to ${pc.bold(file)}...`);
+        }
 
         appendFileSync(file, text);
 
