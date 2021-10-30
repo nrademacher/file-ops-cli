@@ -37,9 +37,25 @@ file-ops fnr '<old>' '<new>' '<file>'
 
 ### Prepend
 
-```bas
-file-ops prepend '<text>' '<file>'
+```bash
+file-ops prepend '<text>' <flags> '<file>'
 ```
+
+#### Flags
+
+* `--unique`, `-u`
+ * Will skip file if file already includes input string
+
+### Append
+
+```bash
+file-ops append '<text>' <flags> '<file>'
+```
+
+#### Flags
+
+* `--unique`, `-u`
+ * Will skip file if file already includes input string
 
 ## TODO
 
