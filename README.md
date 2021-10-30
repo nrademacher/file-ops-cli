@@ -32,9 +32,10 @@ file-ops op=<op> <args> <file>
 ### Find and replace
 
 ```bash
-file-ops fnr '<old>' '<new>' '<file>'
+file-ops fnr '<old>' '<new>' <flags> '<file>'
 ```
-
+* `--silent`, `-s`
+  * Will not log individual processed files to console
 
 ### Prepend
 
@@ -44,6 +45,8 @@ file-ops prepend '<text>' <flags> '<file>'
 
 #### Flags
 
+* `--silent`, `-s`
+  * Will not log individual processed files to console
 * `--unique`, `-u`
   * Will skip file if file already includes input string
 
@@ -55,6 +58,8 @@ file-ops append '<text>' <flags> '<file>'
 
 #### Flags
 
+* `--silent`, `-s`
+  * Will not log individual processed files to console
 * `--unique`, `-u`
   * Will skip file if file already includes input string
 

@@ -1,6 +1,6 @@
 {
   "name": "@nrademacher/file-ops-cli",
-  "version": "0.6.7",
+  "version": "0.6.8",
   "description": "Basic Node CLI file operations",
   "author": "Nikolay Rademacher <rademacher.nikolay@gmail.com>",
   "type": "module",
