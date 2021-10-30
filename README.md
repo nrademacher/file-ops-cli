@@ -6,6 +6,7 @@ Included so far:
 
 - Find and replace
 - Prepending
+- Appending
 
 ## Installation
 
